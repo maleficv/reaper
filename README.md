@@ -44,7 +44,7 @@ Make sure you have gulp and node installed.
 Version
 ==========================
 
-1.0.2
+1.0.2 - javascript fix for browser-sync
 =======
-1.0.0
+1.0.0 - project started
 
