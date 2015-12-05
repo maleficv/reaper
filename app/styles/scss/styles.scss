@@ -1,0 +1,18 @@
+$titleColor: rgb(20, 160, 250);
+$strongColor: rgb(230, 100, 70);
+$background: rgb(20, 50, 100);
+
+body{
+	background: $background;
+	color: white;
+	font-family: Arial;
+}
+
+h1{
+	color: $titleColor;
+}
+
+strong{
+	color: $strongColor;
+	font-size: 1.1em;
+}
