@@ -43,8 +43,8 @@ Make sure you have gulp and node installed.
 
 Version
 ==========================
-<<<<<<< HEAD
+
 1.0.2
 =======
 1.0.0
->>>>>>> d40591910a9606e08e2dd9eb791ec2359df8c9a7
+
