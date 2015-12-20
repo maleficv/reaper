@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "My Portfolio",
+  "description": "",
   "main": "index.html",
   "dependencies": {
     "gulp-minify-css": "^1.2.1",
@@ -21,7 +21,6 @@
     "gulp-sequence": "^0.4.1",
     "gulp-shell": "^0.5.1",
     "gulp-size": "^2.0.0",
-    "gulp-uncss": "^1.0.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

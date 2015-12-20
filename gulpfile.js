@@ -7,7 +7,6 @@ var plumber = require('gulp-plumber'); // fix for errors
 var sass = require('gulp-sass'); // sass
 var gulpSequence = require('gulp-sequence'); // running tasks in provided sequence
 var clean = require('gulp-clean'); // deleting files/folders
-var uncss = require('gulp-uncss'); // removes unused css rules
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
 
@@ -112,10 +111,6 @@ gulp.task('scssDeploy', function() {
         .pipe(sass())
         .pipe(autoprefixer())
         .pipe(concat('styles.css'))
-        .pipe(uncss({
-            html: ['app/index.html'],
-            ignore: ['.affix', '.affix .nav a', '.affix img']
-        }))
         .pipe(minify())
         .pipe(gulp.dest('dist/styles'));
 })

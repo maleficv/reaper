@@ -8,7 +8,6 @@ Boilerplate includes:
 CSS:
 Minify-css
 Sass
-Uncss
 Autoprefixer
 
 
@@ -44,7 +43,9 @@ Make sure you have gulp and node installed.
 Version
 ==========================
 
+1.0.3 - removed uncss - too much bugged
+
 1.0.2 - javascript fix for browser-sync
-=======
+
 1.0.0 - project started
 
