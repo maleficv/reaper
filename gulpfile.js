@@ -67,18 +67,23 @@ gulp.task('js-clean', function(){
     .pipe(clean());
 })
 
-gulp.task('scss', function() {
-    return gulp.src(['app/styles/scss/*.scss'])
+gulp.task('scss', ['css-clean'], function() {
+    return gulp.src(['app/styles/**/*.*'])
         .pipe(plumber())
         .pipe(sass())
+        .pipe(concat('styles.css'))
         .pipe(gulp.dest('app/styles'))
         .pipe(browserSync.stream());
+})
+
+gulp.task('css-clean', function(){
+    return gulp.src(['app/styles/styles.css'])
+    .pipe(clean());
 })
 
 gulp.task('default', ['host'], function() {
     gulp.watch('app/styles/scss/*.scss', ['scss']);
     gulp.watch('app/scripts/**/*.js', ['js']);
-    gulp.watch('app/images/**', ['images']);
     gulp.watch('app/*.html', ['html']);
 })
 
@@ -106,11 +111,9 @@ gulp.task('ie', function() {
 })
 
 gulp.task('scssDeploy', function() {
-    gulp.src(['app/styles/*.scss', 'app/styles/scss/*.scss', 'app/styles/*.css'])
+    gulp.src(['app/styles/styles.css'])
         .pipe(plumber())
-        .pipe(sass())
         .pipe(autoprefixer())
-        .pipe(concat('styles.css'))
         .pipe(minify())
         .pipe(gulp.dest('dist/styles'));
 })
