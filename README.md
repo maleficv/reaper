@@ -4,34 +4,34 @@ My own version of gulp basic boilerplate. This is a tool for coding simple websi
 
 Boilerplate includes:
 
-CSS:
-Minify-css
-Sass
-Autoprefixer
+CSS:  
+Minify-css  
+Sass  
+Autoprefixer  
 
-Javascript:
-Uglify
+Javascript:  
+Uglify  
 
-Utility:
-Imagemin
-Concat
-Rename
+Utility:  
+Imagemin  
+Concat  
+Rename  
 
-Helpers:
-Browser-sync
-Sequence
-Plumber
-Del
-Vinyl-paths
+Helpers:  
+Browser-sync  
+Sequence  
+Plumber  
+Del  
+Vinyl-paths  
 
 What it does?
 ==========================
--Joins (concatonates) Javascript/Css/Sass files
--Compress files
--Compress images
--Compiles SASS to CSS
--Displays errors but does not stop running (doesn't "break") after such
--Hosts simple server that updates automatically changes in your files to your browser
+-Joins (concatonates) Javascript/Css/Sass files  
+-Compress files  
+-Compress images  
+-Compiles SASS to CSS  
+-Displays errors but does not stop running (doesn't "break") after such  
+-Hosts simple server that updates automatically changes in your files to your browser  
 
 In short: makes your life easier
 
@@ -52,27 +52,34 @@ Installation
 ==========================
 Make sure you have gulp and node installed.
 
-1. Install node: https://nodejs.org/
-2. Install gulp globally: run your command line interface and type in "npm install gulp -g"
-3. Clone/download the repo
-4. Navigate to root of the project
-5. Type in "npm install" - this will download all missing dependencies
-6. Initialize server by typing "gulp"
+1. Install node: https://nodejs.org/  
+
+2. Install gulp globally: run your command line interface and type in "npm install gulp -g"  
+
+3. Clone/download the repo  
+
+4. Navigate to root of the project  
+
+5. Type in "npm install" - this will download all missing dependencies  
+
+6. Initialize server by typing "gulp"  
+
 7. When you are finished, stop server by pressing ctr+c and deploy ready-to-go files by typing "gulp deploy"
+
 
 
 Version
 ==========================
 
-1.1.0 - Fixed a lot issues and bugs with serving scss/js files, added vinyl-paths, gulp-util, and gulp-rename 
+1.1.0 - Fixed a lot issues and bugs with serving scss/js files, added vinyl-paths, gulp-util, and gulp-rename  
 
-1.0.5 - replaced "gulp-clean" with "del"
+1.0.5 - replaced "gulp-clean" with "del"  
 
-1.0.4 - changed "app" dir to "src", fixed bug with .js init
+1.0.4 - changed "app" dir to "src", fixed bug with .js init  
 
-1.0.3 - removed "uncss" - too much bugged
+1.0.3 - removed "uncss" - too much bugged  
 
-1.0.2 - javascript fix for "browser-sync"
+1.0.2 - javascript fix for "browser-sync"  
 
 1.0.0 - project started
 
