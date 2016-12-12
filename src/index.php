@@ -1,8 +1,9 @@
 <html>
 <head>
-	<link href="styles/styles.css" rel="stylesheet" type="text/css">
+	<link href="../styles/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+    <?= 'his'; ?>
     <h1>I'm Reaper</h1>
     <h3>I'll clean, compact and combine your SCSS/CSS and Javascript files, compress images and host you a mini-server.</h3>
     <h3 id="javascript"></h3>
@@ -23,8 +24,8 @@
     		After you are happy with your project, hit ctr+c to stop the server, and type in <strong>"gulp deploy"</strong>. This will create new folder named "dist" with compiled files ready to go live on server.
     	</li>
     </ol>
-    <img src="images/flower.jpg">
-    <script src="scripts/main.js"></script>
+    <img src="../images/flower.jpg">
+    <script src="../scripts/main.js"></script>
 </body>
 
 </html>

@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 var uglify = require('gulp-uglify'); // compressing javascript files
 var minify = require('gulp-minify-css'); // compressing css
-var imageopt = require('gulp-imagemin'); // compressing images
 var concat = require('gulp-concat'); // joining files
 var plumber = require('gulp-plumber'); // fix for errors
 var sass = require('gulp-sass'); // sass
@@ -16,8 +15,8 @@ var gutil = require('gulp-util');
 
 // Tasks for developing (coding)
 
-gulp.task('html', function () {
-  gulp.src('src/*')
+gulp.task('php', function () {
+  gulp.src('src/views/*')
     .pipe(plumber())
     .pipe(gulp.dest('src'))
     .pipe(browserSync.reload({
@@ -27,7 +26,7 @@ gulp.task('html', function () {
 
 gulp.task('host', function () {
   browserSync.init({
-    server: "./src"
+    proxy: 'http://localhost:8080/reaper-wamp/src/views/'
   });
 });
 
@@ -67,10 +66,10 @@ gulp.task('cleanJs', function () {
 gulp.task('watch', function() {
   gulp.watch(['src/styles/**/*.scss', 'src/styles/**/*.css', '!src/styles/styles.css'], ['scss']);
   gulp.watch(['src/scripts/**/*.js', '!src/scripts/main.js'], ['js']);
-  gulp.watch('src/*.html', ['html']);
+  gulp.watch('src/views/*.php', ['php']);
 })
 
-gulp.task('default', gulpSequence(['html', 'js', 'scss'], 'host', 'watch'));
+gulp.task('default', gulpSequence(['php', 'js', 'scss'], 'host', 'watch'));
 
 // Tasks for deploying (distribution)
 
@@ -113,4 +112,4 @@ gulp.task('cleanDeploy', function () {
     .pipe(vinylPaths(del))
 });
 
-gulp.task('deploy', gulpSequence(['html', 'js', 'scss'], 'cleanDeploy', ['htmlDeploy', 'jsDeploy', 'scssDeploy', 'imagesDeploy']));
+gulp.task('deploy', gulpSequence(['html', 'js', 'scss'], 'cleanDeploy', ['htmlDeploy', 'jsDeploy', 'scssDeploy']));
